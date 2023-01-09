@@ -5,8 +5,9 @@ import {Routes,Route} from 'react-router-dom';
 //components
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import AboutUs from "./components/AboutUs";
+import Books from "./components/Books";
 import AddBook from "./components/AddBook";
+import AboutUs from "./components/AboutUs";
 import Footer from "./components/Footer";
 
 function App() {
@@ -15,8 +16,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/books" element={<Books />} />
         <Route path="/addbook" element={<AddBook />} />
+        <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
       <Footer />
     </div>

@@ -1,0 +1,23 @@
+.books-search{
+    margin: 30px;
+    text-align: center;
+}
+.form-search button{
+    border: none;
+    outline: none;
+    position: relative;
+    margin-right: -45px;
+    background: transparent;
+    pointer-events: none;
+}
+.search-input{
+    padding: 5px 5px 5px 50px;
+    width: 400px;
+    border: 1.5px solid #636262;
+    border-radius: 25px;
+}
+.search-input:hover,
+.search-input:focus,
+.search-input:active {
+  border: 1.5px solid #332e2e;
+}
