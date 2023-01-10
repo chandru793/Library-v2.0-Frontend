@@ -4,6 +4,7 @@ import '../assets/css/Books.css'
 
 //components
 import Tables from './Tables';
+import BookCards from './BookCards';
 
 //js
 import Details from './Details.js'; 
@@ -14,7 +15,7 @@ const Books = () => {
 
     console.log("Books: ",books);
     const handleChange = (e) => {
-        setSearch(e.target.value)
+        setSearch(e.target.value);
         console.log(search)
     }
 
@@ -43,8 +44,11 @@ const Books = () => {
                     />
                 </form>
             </div>
-            {
+            {/* {
                 (books)? <Tables books={books} setBooks={setBooks} filteredBooks={filteredBooks} />:<h1>Loading...</h1>
+            } */}
+            {
+                (books)? <BookCards books={books} setBooks={setBooks} filteredBooks={filteredBooks} />:<h1>Loading...</h1>
             }
         </div>
     )

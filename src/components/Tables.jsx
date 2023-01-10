@@ -21,7 +21,9 @@ const Tables = ({ books, setBooks, filteredBooks }) => {
                   <TableHead>
                       <TableRow>
                           <TableCell styles={{}}>Book Name</TableCell>
-                            <TableCell>Author Name</TableCell>
+                          <TableCell>Author Name</TableCell>
+                          <TableCell>Description</TableCell>
+                          
                       </TableRow>
                   </TableHead>
                   <TableBody>
@@ -29,6 +31,8 @@ const Tables = ({ books, setBooks, filteredBooks }) => {
                           <TableRow key={book.id}>
                               <TableCell>{book.bookName}</TableCell>
                               <TableCell>{book.authorName}</TableCell>
+                              <TableCell>{book.description}</TableCell>
+                              {/* <img src={book.img} alt={book.bookName} /> */}
                           </TableRow>
                       ))}
                   </TableBody>

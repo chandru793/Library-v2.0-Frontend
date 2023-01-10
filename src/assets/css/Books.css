@@ -21,3 +21,18 @@
 .search-input:active {
   border: 1.5px solid #332e2e;
 }
+@media (max-width: 470px) {
+    .search-input {
+      width: 350px;
+    }
+  }
+  @media (max-width: 400px) {
+    .search-input {
+      width: 300px;
+    }
+  }
+  @media (max-width: 325px) {
+    .search-input {
+      width: 245px;
+    }
+  }

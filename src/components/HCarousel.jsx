@@ -7,11 +7,13 @@ import {
   CarouselCaption,
 } from 'reactstrap';
 
-import '../assets/css/Home.css'
+import '../assets/css/Home.css';
+import C1 from '../assets/img/c1.jpg';
 
 const items = [
   {
-    src:'https://t4.ftcdn.net/jpg/03/32/82/91/240_F_332829173_V4kiRCM2s24t1h5xs2mamqchsQmFLedg.jpg',
+    // src:'https://t4.ftcdn.net/jpg/03/32/82/91/240_F_332829173_V4kiRCM2s24t1h5xs2mamqchsQmFLedg.jpg',
+    src:C1,
     altText: 'Slide 1',
     key: 1,
   },
