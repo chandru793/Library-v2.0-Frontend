@@ -9,6 +9,8 @@ import {
 
 import '../assets/css/Home.css';
 import C1 from '../assets/img/c1.jpg';
+import C2 from '../assets/img/c2.jpg';
+import C3 from '../assets/img/c3.jpg';
 
 const items = [
   {
@@ -18,12 +20,14 @@ const items = [
     key: 1,
   },
   {
-    src: 'https://t4.ftcdn.net/jpg/02/52/76/41/240_F_252764153_iJawRIU9YeMjHNflcOh08e0qIm7gGa2o.jpg',
+    // src: 'https://t4.ftcdn.net/jpg/02/52/76/41/240_F_252764153_iJawRIU9YeMjHNflcOh08e0qIm7gGa2o.jpg',
+    src:C2,
     altText: 'Slide 2',
     key: 2,
   },
   {
-    src: 'https://t3.ftcdn.net/jpg/03/15/03/20/240_F_315032003_2AxYIkQ9cGUXVUjYBQ0RLD5mEJedz0Jr.jpg',
+    // src: 'https://t3.ftcdn.net/jpg/03/15/03/20/240_F_315032003_2AxYIkQ9cGUXVUjYBQ0RLD5mEJedz0Jr.jpg',
+    src:C3,
     altText: 'Slide 3',
     key: 3,
   },
