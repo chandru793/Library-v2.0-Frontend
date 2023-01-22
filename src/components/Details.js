@@ -15,6 +15,7 @@ const Details = [
     description:
       "The Monk Who Sold His Ferrari is a 1997 self-help book by Robin Sharma. It is a fable about a lawyer who is on a life-changing odyssey to an ancient culture, where he meets a Himalayan monk and acquires life lessons that help him discover his true destiny.",
   },
+  
   {
     id: 3,
     bookName: "The Secret",
