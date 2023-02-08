@@ -46,11 +46,14 @@ const BookCards = ({ books, setBooks, filteredBooks }) => {
 
     const filtered = filteredBooks;
     console.log("filtered", filteredBooks);
+    if (filteredBooks.length === 0) {
+        return <h5>No books found</h5>
+    }
     return (
         <div>
             <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                 {filtered.map((book) => (
-                    <Grid item xs={4} sm={4} md={3} key={book.id} >
+                    <Grid item xs={4} sm={4} md={4} key={book.id} >
                         <Item>
                             <Card sx={{ height: 466 }}>
                                 <CardHeader
