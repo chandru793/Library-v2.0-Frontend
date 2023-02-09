@@ -13,10 +13,12 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
+import Logo from '../assets/img/Logo.png'
 
 
 const pages = [
     <Link Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>Home</Link >,
+    <Link Link to="/books" style={{ textDecoration: 'none', color: 'inherit' }}>Books</Link >,
     <Link Link to="/summarize" style={{ textDecoration:'none',color:'inherit' }}>Summarize</Link >,
     <Link Link to="/article-extraction" style={{ textDecoration:'none',color:'inherit' }}>Article Extraction</Link >,
 ];
@@ -41,11 +43,12 @@ function Navbar() {
         setAnchorElUser(null);
     };
 
+
     return (
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                    <img src={Logo} height={30} width={30} sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
                     <Typography
                         variant="h6"
                         noWrap
@@ -62,7 +65,7 @@ function Navbar() {
                             textDecoration: 'none',
                         }}
                     >
-                        Text-Analysis
+                          ext-Insights
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -118,7 +121,7 @@ function Navbar() {
                             textDecoration: 'none',
                         }}
                     >
-                        Text-Analysis
+                        Text-Insights
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (

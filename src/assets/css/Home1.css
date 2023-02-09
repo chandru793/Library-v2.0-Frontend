@@ -1,0 +1,22 @@
+.containerHome{
+    display: flex;
+    flex-direction: row;
+}
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    font-family: monospace;
+    font-size:60px;
+    padding-top: 160px;
+    padding-left: 275px;
+    text-align: center;
+    line-height: 80px;
+}
+
+
+.imgContainer {
+    height: 200px;
+    width: 200px;
+    padding-left:150px;
+    padding-top: 50px;
+}

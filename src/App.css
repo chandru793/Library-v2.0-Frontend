@@ -1,1 +1,17 @@
+.bg{
+    position: fixed;
+    top: 50%;
+    left: 35%;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transform: translate(-55% , -50%);
+    padding: 30px 180px;
+    z-index: -1;
+}
+/* .bg  svg {    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);} */
 
