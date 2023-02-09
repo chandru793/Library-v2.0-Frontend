@@ -1,0 +1,103 @@
+.container{
+    height: 100%;
+    width: 100%;
+}
+.innerContainer{
+    color: white;
+    /* width: 100%; */
+    /* height: 100%; */
+    /* margin: 0 auto; */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+textarea{
+    background-color: transparent;
+    border:2px solid #f1f1f1;
+    border-radius: 5px;
+    padding: 15px;
+    letter-spacing: 0.1rem;
+
+    color: #f1f1f1;
+}
+textarea:focus{
+    outline: none;
+    border:2px solid #f1f1f1;
+}
+
+.slider{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    letter-spacing: 0.1rem;
+
+}
+.sliderBox{
+    margin: 15px 15px 10px 20px
+}
+
+.sliderButton{
+    padding: 7px;
+    width: 100px;
+    border-radius: 25px;
+    letter-spacing: 0.1rem;
+    background-color:transparent;
+    color: #f1f1f1;
+    border: 2px solid #f1f1f1;
+}
+.sliderButton:hover,
+.sliderButton:focus,
+.sliderButton:active{
+    scale: 1.05;
+    letter-spacing: 0.2rem;
+}
+
+.afterSummarize{
+    margin-top: 20px;
+    padding: 7px;
+    border-radius: 7px;
+    letter-spacing: 0.1rem;
+    background-color:transparent;
+    color: #f1f1f1;
+    border: 2px solid #f1f1f1;
+    width: 772px;
+}
+.insideAfterSummarize{
+    text-align: right;
+}
+
+.copyButton{
+    /* margin-top: 20px; */
+    padding: 7px;
+    border-radius: 7px;
+    letter-spacing: 0.1rem;
+    background-color:transparent;
+    color: #f1f1f1;
+    border: 2px solid #f1f1f1;
+    width: 149px;
+}
+
+.SummarizedText{
+    padding:8px;
+    color: #f1f1f1;
+}
+
+@media(max-width:1020px){
+    textarea{
+        width: 100%;
+    }
+}
+@media(max-width:760px){
+    textarea{
+        width: 100%;
+    }
+}
