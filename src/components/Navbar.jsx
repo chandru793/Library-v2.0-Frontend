@@ -19,6 +19,7 @@ import Logo from '../assets/img/Logo.png'
 const pages = [
     <Link Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>Home</Link >,
     <Link Link to="/books" style={{ textDecoration: 'none', color: 'inherit' }}>Books</Link >,
+    <Link Link to="/news" style={{ textDecoration: 'none', color: 'inherit' }}>News</Link >,
     <Link Link to="/summarize" style={{ textDecoration:'none',color:'inherit' }}>Summarize</Link >,
     <Link Link to="/article-extraction" style={{ textDecoration:'none',color:'inherit' }}>Article Extraction</Link >,
 ];

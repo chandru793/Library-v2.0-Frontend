@@ -5,12 +5,14 @@ import { Route, Routes } from "react-router-dom";
 import BackgroundAnimation from "./components/BackGroundAnimation";
 
 //components
+import SignUp from "./components/auth/SignUp";
+import Login from "./components/auth/Login";
 import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import Summarize from "./components/Summarize.jsx";
-import ArticleExtraction from "./components/ArticleExtraction";
 import Home1 from "./components/Home1";
-import Books from "./components/Books";
+import Books from "./components/E-learning/Books";
+import Summarize from "./components/Text-Analysis/Summarize";
+import ArticleExtraction from "./components/Text-Analysis/ArticleExtraction";
+import News from "./components/E-learning/News";
 
 function App() {
   return (
@@ -22,10 +24,12 @@ function App() {
       {/* <BackgroundAnimation/> */}
       <Routes>
         <Route path="/" element={<Home1/>}/>
-        <Route path="/home" element={<Home />} />
         <Route path="/books" element={<Books />} />
+        <Route path="/news" element={<News />} />
         <Route path="/summarize" element={<Summarize />} />
         <Route path="/article-extraction" element={<ArticleExtraction />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
 
       {/* Toast  */}

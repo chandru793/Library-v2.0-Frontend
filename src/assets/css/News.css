@@ -1,15 +1,20 @@
-.bookContainer{
+.NewsContainer{
     margin:50px 50px;
     text-align: -webkit-center;
-    align-items: center;
+    align-items: center; 
 }
-.cards{
+.Maincards{
     background: transparent;
     background-color: transparent !important;
     color:#ffffff !important;
     border: 2px solid #ffffff !important;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
 }
-.card{
+.Textcard{
     color:#ffffff !important;
 }
 .button{
