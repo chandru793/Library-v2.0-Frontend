@@ -7,7 +7,6 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea } from '@mui/material';
 import { Grid } from '@mui/material';
 import '../../assets/css/News.css'
-import { Link } from 'react-router-dom';
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 
@@ -95,8 +94,6 @@ const News = () => {
                                             <Typography variant="body2" color="text.secondary" className='card'>
                                                 {news.desciption}
                                             </Typography>
-                                            {/* <Typography variant="body2" color="text.secondary" className='card'> */}
-                                            {/* </Typography> */}
                                         </CardContent>
                                         <CardContent style={{ "display": "flex", "alignItems": "center", "justifyContent": "center" }}>
                                             <Button size="small" href={news.url} target='blank' className='button'>
