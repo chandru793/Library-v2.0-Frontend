@@ -8,6 +8,8 @@ import { Button, CardActionArea } from '@mui/material';
 import { Grid } from '@mui/material';
 import '../../assets/css/News.css'
 import { Link } from 'react-router-dom';
+import Dropdown from 'react-dropdown'
+import 'react-dropdown/style.css'
 
 
 //api
@@ -16,15 +18,33 @@ import { getAllNews } from '../Api/Api'
 const News = () => {
     const [allNews, setAllNews] = useState([]);
 
-    useEffect(() => {
-        getAllNews().then((res) => {
+    const categoryOptions = [
+        { value: 'general', label: 'General' },
+        { value: 'business', label: 'Business' },
+        { value: 'entertainment', label: 'Entertainment' },
+        { value: 'health', label: 'Health' },
+        { value: 'science', label: 'Science' },
+
+    ];
+    
+    const [category, setCategory] = useState(categoryOptions[0].value);
+    console.log(category)
+
+    const update = () => {
+        getAllNews(category).then((res) => {
             console.log(res.data.articles);
             setAllNews(res.data.articles);
             console.log(allNews);
         });
+    }
+
+    useEffect(() => {
+        update()
     }, []);
+
     return (
         <div>
+            <Dropdown options={categoryOptions} onChange={(e) => { setCategory(e.value);update(category) }} value={category} placeholder="Select News Type" />
             <div className='NewsContainer'>
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     {

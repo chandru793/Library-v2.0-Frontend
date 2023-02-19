@@ -54,3 +54,20 @@
 .h1{
     text-decoration: none;
 }
+
+@media(max-width:1020px){
+    .result{
+        width: 80%;
+    }
+}
+@media(max-width:760px){
+    .field{
+        text-align: center;
+    }
+    .button1{
+        margin-top: 20px;
+    }
+    .result{
+        width: 90%;
+    }
+}
