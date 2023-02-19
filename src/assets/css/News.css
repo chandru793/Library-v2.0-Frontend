@@ -1,3 +1,28 @@
+.filter{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.Dropdown-control{
+    background-color: rgba(0,0,0,0.5) !important;
+    color: #fff !important;
+    width: 50vw;
+}
+.Dropdown-menu{
+    background-color: rgba(0,0,0,0.5) !important;
+    color: #fff !important;
+}
+.Dropdown-option{
+    color:#fff !important
+}
+.Dropdown-option:hover{
+    background-color: rgba(0,0,0,0.5) !important;
+    color:#fff !important
+}
+.Dropdown-option.is-selected{
+    background-color:rgba(0,0,0,0.5) !important;
+    color:#fff !important
+}
 .NewsContainer{
     margin:50px 50px;
     text-align: -webkit-center;
