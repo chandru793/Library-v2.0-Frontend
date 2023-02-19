@@ -21,7 +21,6 @@ function App() {
       <div className="bg">
         <BackgroundAnimation />
       </div>
-      {/* <BackgroundAnimation/> */}
       <Routes>
         <Route path="/" element={<Home1/>}/>
         <Route path="/books" element={<Books />} />

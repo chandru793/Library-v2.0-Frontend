@@ -85,8 +85,8 @@ function Summarize() {
                                 min={10}
                                 max={90}
                             />
+                        <p className="p">{percent}%</p>
                         </Box>
-                        <p>{percent}%</p>
                     </div>
                     {/* {data} */}
                     <button
