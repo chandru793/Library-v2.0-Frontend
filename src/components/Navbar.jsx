@@ -17,7 +17,7 @@ import Logo from '../assets/img/Logo.png'
 
 
 const pages = [
-    <Link Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>Home</Link >,
+    <Link Link to="/home" style={{ textDecoration: 'none', color: 'inherit' }}>Home</Link >,
     <Link Link to="/books" style={{ textDecoration: 'none', color: 'inherit' }}>Books</Link >,
     <Link Link to="/news" style={{ textDecoration: 'none', color: 'inherit' }}>News</Link >,
     <Link Link to="/summarize" style={{ textDecoration:'none',color:'inherit' }}>Summarize</Link >,
@@ -54,7 +54,7 @@ function Navbar() {
                         variant="h6"
                         noWrap
                         component="a"
-                        href="/"
+                        href="/home"
                         ClassName="title"
                         sx={{
                             mr: 2,
@@ -110,7 +110,7 @@ function Navbar() {
                         variant="h5"
                         noWrap
                         component="a"
-                        href=""
+                        href="/home"
                         sx={{
                             mr: 2,
                             display: { xs: 'flex', md: 'none' },

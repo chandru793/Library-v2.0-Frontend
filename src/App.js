@@ -22,13 +22,14 @@ function App() {
         <BackgroundAnimation />
       </div>
       <Routes>
-        <Route path="/" element={<Home1/>}/>
+        <Route path="/" exact element={<Login />} />
+        <Route path="/login" exact element={<Login />} />
+        <Route path="/signup" exact element={<SignUp />} />
+        <Route path="/home" element={<Home1/>}/>
         <Route path="/books" element={<Books />} />
         <Route path="/news" element={<News />} />
         <Route path="/summarize" element={<Summarize />} />
         <Route path="/article-extraction" element={<ArticleExtraction />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/login" element={<Login />} />
       </Routes>
 
       {/* Toast  */}

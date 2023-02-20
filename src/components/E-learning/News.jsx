@@ -50,7 +50,7 @@ const News = () => {
         { value: 'us', label: 'United States' },
     ]
 
-    const [country, setCountry] = useState(countryOptions[5])
+    const [country, setCountry] = useState(countryOptions[5].value)
     console.log(country);
 
     const update = () => {
