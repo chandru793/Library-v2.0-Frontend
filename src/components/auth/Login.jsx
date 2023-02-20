@@ -8,9 +8,9 @@ const Login = () => {
     async function loginUser(event) {
         event.preventDefault()
         const response = await fetch(`http://localhost:8081/api/login`, {
-            method:`POST`,
+            method: `POST`,
             headers: {
-                'Content-Type':'application/json',
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify({
                 email,
@@ -22,7 +22,8 @@ const Login = () => {
 
         if (data.user) {
             // alert("Login Successful")
-            window.location.href="/home"
+            localStorage.setItem('token', data.user)
+            window.location.href = "/home"
         } else {
             alert(`chexk your username and password`)
         }
@@ -37,15 +38,15 @@ const Login = () => {
                     type="email"
                     placeholder="Email"
                     value={email}
-                    onChange={(e)=>setEmail(e.target.value)}
+                    onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
                     type="password"
                     placeholder="Password"
                     value={password}
-                    onChange={(e)=>setPassword(e.target.value)}
+                    onChange={(e) => setPassword(e.target.value)}
                 />
-                <input type='submit' value="Submit"/>
+                <input type='submit' value="Submit" />
                 {/* {email} */}
             </form>
         </div>

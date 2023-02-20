@@ -7,16 +7,24 @@ import jwt from 'jsonwebtoken'
 const Home1 = () => {
     // const history = useHistory()
 
-    // async function populate(){}
+    async function populate() {
+        const req = await fetch(`http://localhost:8081/api/quote`, {
+            headers: {
+                'x-access-token':localStorage.getItem('token'),
+            }
+        })
+        const data = req.json();
+        console.log(data);
+    }
     
-    const token = localStorage.getItem('Item')
+    const token = localStorage.getItem('token')
     if (token) {
         const user = jwt.decode(token)
         if (!user) {
             localStorage.removeItem('token')
             window.location.href='/login'
         } else {
-            // populate()
+            populate()
         }
     }
 

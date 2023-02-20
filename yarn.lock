@@ -11711,7 +11711,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router-dom@npm:^6.8.0":
+"react-router-dom@npm:^6.8.1":
   version: 6.8.1
   resolution: "react-router-dom@npm:6.8.1"
   dependencies:
@@ -13301,7 +13301,7 @@ __metadata:
     react-dom: ^18.2.0
     react-dropdown: ^1.11.0
     react-font: ^1.2.1
-    react-router-dom: ^6.8.0
+    react-router-dom: ^6.8.1
     react-scripts: ^5.0.1
     react-toastify: ^9.0.3
     react-tsparticles: ^2.0.6
