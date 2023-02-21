@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import { useHistory } from 'react-router-dom'
 
 const SignUp = () => {
 
@@ -31,7 +30,7 @@ const SignUp = () => {
         console.log(data);
 
         if (data.status === "ok") {
-            window.location.push('/login')
+            window.location.href = '/login'
         }
     }
 

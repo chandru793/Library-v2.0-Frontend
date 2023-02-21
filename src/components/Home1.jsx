@@ -3,20 +3,31 @@ import LogoText from '../assets/img/LogoText.png'
 import '../assets/css/Home1.css'
 import Font from 'react-font'
 import jwt from 'jsonwebtoken'
+import { useNavigate } from "react-router-dom";
+
 
 const Home1 = () => {
-    // const history = useHistory()
+    const navigate = useNavigate();
 
-    // async function populate(){}
+
+    async function populate() {
+        const req = await fetch(`http://localhost:8081/api/quote`, {
+            headers: {
+                'x-access-token':localStorage.getItem('token'),
+            }
+        })
+        const data = req.json();
+        console.log(data);
+    }
     
-    const token = localStorage.getItem('Item')
+    const token = localStorage.getItem('token')
     if (token) {
         const user = jwt.decode(token)
         if (!user) {
             localStorage.removeItem('token')
-            window.location.href='/login'
+            navigate('/login')
         } else {
-            // populate()
+            populate()
         }
     }
 

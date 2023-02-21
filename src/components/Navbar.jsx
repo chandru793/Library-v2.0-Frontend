@@ -20,10 +20,15 @@ const pages = [
     <Link Link to="/home" style={{ textDecoration: 'none', color: 'inherit' }}>Home</Link >,
     <Link Link to="/books" style={{ textDecoration: 'none', color: 'inherit' }}>Books</Link >,
     <Link Link to="/news" style={{ textDecoration: 'none', color: 'inherit' }}>News</Link >,
-    <Link Link to="/summarize" style={{ textDecoration:'none',color:'inherit' }}>Summarize</Link >,
-    <Link Link to="/article-extraction" style={{ textDecoration:'none',color:'inherit' }}>Article Extraction</Link >,
+    <Link Link to="/summarize" style={{ textDecoration: 'none', color: 'inherit' }}>Summarize</Link >,
+    <Link Link to="/article-extraction" style={{ textDecoration: 'none', color: 'inherit' }}>Article Extraction</Link >,
 ];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = [
+    <div disabled>Profile</div>,
+    <div disabled>Account</div>,
+    <div disabled>Dashboard</div>,
+    <div onClick={() => { localStorage.clear(); window.location.href = "/login"; }}>Logout</div>
+];
 
 function Navbar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -66,7 +71,7 @@ function Navbar() {
                             textDecoration: 'none',
                         }}
                     >
-                          ext-Insights
+                        ext-Insights
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
