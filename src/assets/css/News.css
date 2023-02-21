@@ -9,18 +9,18 @@
     width: 50vw;
 }
 .Dropdown-menu{
-    background-color: rgba(0,0,0,0.5) !important;
+    background-color: black !important;
     color: #fff !important;
 }
 .Dropdown-option{
     color:#fff !important
 }
 .Dropdown-option:hover{
-    background-color: rgba(0,0,0,0.5) !important;
+    background-color: rgba(73, 73, 73, 0.5) !important;
     color:#fff !important
 }
 .Dropdown-option.is-selected{
-    background-color:rgba(0,0,0,0.5) !important;
+    background-color:rgba(73, 73, 73, 0.5)  !important;
     color:#fff !important
 }
 .NewsContainer{
