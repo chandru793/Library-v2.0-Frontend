@@ -1,6 +1,16 @@
 import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from "react-router-dom";
+import "../../assets/css/auth.css"
+import { ToastContainer } from "react-toastify";
+
+
+//image
+import LogoText from '../../assets/img/LogoTextCrop.png'
+
+//toast
+import { authFailed } from '../Toast'
+
 
 const Login = () => {
     const navigate = useNavigate();
@@ -19,6 +29,7 @@ const Login = () => {
                 password,
             }),
         })
+        // console.log(response)
 
         const data = await response.json()
         console.log(data);
@@ -28,30 +39,58 @@ const Login = () => {
             localStorage.setItem('name', data.name)
             navigate("/home")
         } else {
-            alert(`chexk your username and password`)
+            // alert(`chexk your username and password`)
+            console.log("failed")
+            authFailed();
         }
-        console.log(data);
+        // console.log(data);
     }
 
     return (
-        <div>
-            <h1>Login</h1>
-            <form onSubmit={loginUser}>
-                <input
-                    type="email"
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <input type='submit' value="Submit" />
-                {/* {email} */}
-            </form>
+        <div className='authContainer'>
+            <div className='imageDiv'>
+                <img src={LogoText} className='image' />
+            </div>
+            <div className='authInnerContainer'>
+                <h1 className='authh1'>Login</h1>
+                <form onSubmit={loginUser} className='form'>
+                    <label for='email' className='label'>E-mail:</label>
+                    <input
+                        type="email"
+                        name='email'
+                        placeholder="Email"
+                        value={email}
+                        className='input'
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <label for='password' className='label'>Password:</label>
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        name='password'
+                        value={password}
+                        className='input'
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <input type='submit' value="Submit" className='button' />
+                    {/* {email} */}
+                </form>
+                <p className='p'>New to Text-Insights? <span className='span' onClick={() => navigate("/signup")}>Register</span></p>
+            </div>
+
+            {/* Toast  */}
+            <ToastContainer
+                position="top-right"
+                autoClose={2000}
+                hideProgressBar
+                newestOnTop
+                closeOnClick={false}
+                rtl={false}
+                pauseOnFocusLoss={false}
+                draggable={false}
+                pauseOnHover={false}
+                theme="dark"
+            />
         </div>
     )
 }

@@ -14,6 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/img/Logo.png'
+import { useEffect,useState } from 'react';
 
 
 const pages = [
@@ -23,16 +24,20 @@ const pages = [
     <Link Link to="/summarize" style={{ textDecoration: 'none', color: 'inherit' }}>Summarize</Link >,
     <Link Link to="/article-extraction" style={{ textDecoration: 'none', color: 'inherit' }}>Article Extraction</Link >,
 ];
-const settings = [
-    <div disabled>Profile</div>,
-    <div disabled>Account</div>,
-    <div disabled>Dashboard</div>,
-    <div onClick={() => { localStorage.clear(); window.location.href = "/login"; }}>Logout</div>
-];
+// const name = localStorage.getItem('name')
+// console.log(name)
+// const settings = [
+//     // <div disabled>Profile</div>,
+//     // <div disabled>Account</div>,
+//     // <div disabled>Dashboard</div>,
+//     <div disabled>{name}</div>,
+//     <div onClick={() => { localStorage.clear(); window.location.href = "/login"; }}>Logout</div>
+// ];
 
 function Navbar() {
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
+    const [anchorElNav, setAnchorElNav] = useState(null);
+    const [anchorElUser, setAnchorElUser] = useState(null);
+    const [name,setName]=useState('')
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -49,12 +54,27 @@ function Navbar() {
         setAnchorElUser(null);
     };
 
+    const settings = [
+        // <div disabled>Profile</div>,
+        // <div disabled>Account</div>,
+        // <div disabled>Dashboard</div>,
+        <div disabled>{name}</div>,
+        <div onClick={() => { localStorage.clear(); window.location.href = "/login"; }}>Logout</div>
+    ]
+
+    useEffect(() => {
+        const name = localStorage.getItem('name')
+        console.log(name)
+        setName(name)
+    }, []);
+
+
 
     return (
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <img src={Logo} height={30} width={30} sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                    <img src={Logo} alt='Logo' height={30} width={30} sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
                     <Typography
                         variant="h6"
                         noWrap

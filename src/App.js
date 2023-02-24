@@ -17,7 +17,7 @@ import News from "./components/E-learning/News";
 function App() {
   return (
     <div className="app">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="bg">
         <BackgroundAnimation />
       </div>

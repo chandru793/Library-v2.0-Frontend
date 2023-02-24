@@ -1,10 +1,12 @@
-import react from "react";
 import axios from "axios";
 import { useState, useCallback } from "react";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import CopyToClipboard from "react-copy-to-clipboard";
 import '../../assets/css/Summarize.css'
+
+//components
+import Navbar from "../Navbar";
 
 //toast
 import { copiedToClipBoard } from "../Toast";
@@ -20,6 +22,8 @@ function Summarize() {
     const handleChange = (e) => {
         setdata(e.target.value);
     };
+
+
     const submit = (e) => {
         // copiedToClipBoard();
         const dataObj = JSON.stringify({
@@ -60,60 +64,71 @@ function Summarize() {
         copiedToClipBoard();
     }, [])
 
+    // const generatePdf = () => {
+    //     const doc = new jsPDF();
+
+    //     doc.text("Hello world!", 10, 10);
+    //     doc.save("test.pdf");
+    // }
+
     return (
-        <div className="container">
-            <div className="innerContainer">
-                <form className="form">
-                    <textarea
-                        rows={25}
-                        cols={100}
-                        value={data}
-                        onChange={handleChange}
-                        autoFocus
-                        placeholder="Enter your text here to summarize"
-                    />
-                    <div className="slider">
-                        <p>Select Percentage to Summarize : </p>
-                        <Box sx={{ width: 300 }} className="sliderBox">
-                            <Slider
-                                aria-label="Temperature"
-                                defaultValue={10}
-                                getAriaValueText={(percent) => setPercent(percent)}
-                                valueLabelDisplay="auto"
-                                step={10}
-                                marks
-                                min={10}
-                                max={90}
-                            />
-                        <p className="p">{percent}%</p>
-                        </Box>
-                    </div>
-                    {/* {data} */}
-                    <button
-                        className="sliderButton"
-                        onClick={submit}
-                    >
-                        Submit
-                    </button>
-                </form>
-                {show && ans !== "" ? (
-                    <div className="afterSummarize" autoFocus>
-                        <div className="insideAfterSummarize">
-                            <CopyToClipboard
-                                className="copyButton"
-                                onCopy={onCopy}
-                                text={ans}
-                            >
-                                <button>Copy to clipboard</button>
-                            </CopyToClipboard>
+        <>
+            <Navbar />
+            <div className="container">
+                <div className="innerContainer">
+                    <form className="form">
+                        <textarea
+                            rows={25}
+                            cols={100}
+                            value={data}
+                            onChange={handleChange}
+                            autoFocus
+                            placeholder="Enter your text here to summarize"
+                        />
+                        <div className="slider">
+                            <p>Select Percentage to Summarize : </p>
+                            <Box sx={{ width: 300 }} className="sliderBox">
+                                <Slider
+                                    aria-label="Temperature"
+                                    defaultValue={10}
+                                    getAriaValueText={(percent) => setPercent(percent)}
+                                    valueLabelDisplay="auto"
+                                    step={10}
+                                    marks
+                                    min={10}
+                                    max={90}
+                                />
+                                <p className="p">{percent}%</p>
+                            </Box>
                         </div>
-                        <div className="SummarizedText">
-                            {ans}
+                        {/* {data} */}
+                        <button
+                            className="sliderButton"
+                            onClick={submit}
+                        >
+                            Submit
+                        </button>
+                    </form>
+                    {show && ans !== "" ? (
+                        <div className="afterSummarize" autoFocus>
+                            <div className="insideAfterSummarize">
+                                <CopyToClipboard
+                                    className="copyButton"
+                                    onCopy={onCopy}
+                                    text={ans}
+                                >
+                                    <button>Copy to clipboard</button>
+                                </CopyToClipboard>
+                                {/* <button onClick={() => { <Pdf />; console.log("done");}}>pdf</button> */}
+                            </div>
+                            <div className="SummarizedText">
+                                {ans}
+                            </div>
                         </div>
-                    </div>
-                ) : null}
+                    ) : null}
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 
