@@ -5,6 +5,7 @@ import Slider from "@mui/material/Slider";
 import CopyToClipboard from "react-copy-to-clipboard";
 import '../../assets/css/Summarize.css'
 
+
 //components
 import Navbar from "../Navbar";
 
@@ -64,13 +65,6 @@ function Summarize() {
         copiedToClipBoard();
     }, [])
 
-    // const generatePdf = () => {
-    //     const doc = new jsPDF();
-
-    //     doc.text("Hello world!", 10, 10);
-    //     doc.save("test.pdf");
-    // }
-
     return (
         <>
             <Navbar />
@@ -101,7 +95,7 @@ function Summarize() {
                                 <p className="p">{percent}%</p>
                             </Box>
                         </div>
-                        {/* {data} */}
+                        
                         <button
                             className="sliderButton"
                             onClick={submit}
@@ -119,7 +113,7 @@ function Summarize() {
                                 >
                                     <button>Copy to clipboard</button>
                                 </CopyToClipboard>
-                                {/* <button onClick={() => { <Pdf />; console.log("done");}}>pdf</button> */}
+                                
                             </div>
                             <div className="SummarizedText">
                                 {ans}
