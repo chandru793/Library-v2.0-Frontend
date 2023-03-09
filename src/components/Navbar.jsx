@@ -11,10 +11,9 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/img/Logo.png'
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 const pages = [
@@ -37,7 +36,7 @@ const pages = [
 function Navbar() {
     const [anchorElNav, setAnchorElNav] = useState(null);
     const [anchorElUser, setAnchorElUser] = useState(null);
-    const [name,setName]=useState('')
+    const [name, setName] = useState('')
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -74,7 +73,9 @@ function Navbar() {
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <img src={Logo} alt='Logo' height={30} width={30} sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                    <Typography sx={{ display: { xs: 'none', md: 'flex' }, mr:0.5 }}>
+                        <img src={Logo} alt='Logo' height={30} width={30} sx={{ display: { xs: 'none', md: 'flex' }}} />
+                    </Typography>
                     <Typography
                         variant="h6"
                         noWrap
@@ -130,7 +131,10 @@ function Navbar() {
                             ))}
                         </Menu>
                     </Box>
-                    <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                    <Typography sx={{ display: { xs: 'flex', md: 'none' }}}>
+                        {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
+                        <img src={Logo} alt='Logo' height={30} width={30} sx={{ display: { xs: 'flex', md: 'none' }}}/>
+                    </Typography>
                     <Typography
                         variant="h5"
                         noWrap
@@ -147,7 +151,7 @@ function Navbar() {
                             textDecoration: 'none',
                         }}
                     >
-                        Text-Insights
+                        ext-Insights
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
