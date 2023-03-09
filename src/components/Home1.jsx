@@ -47,7 +47,7 @@ const Home1 = () => {
                     <Font family='Bungee Shade' className='font1'>Leaders</Font>
                 </div>
                 <div className='imgContainer'>
-                    <img src={LogoText} />
+                    <img src={LogoText}className='img' />
                 </div>
             </div>
         </>

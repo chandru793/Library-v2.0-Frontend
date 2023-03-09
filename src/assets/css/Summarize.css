@@ -89,7 +89,8 @@ textarea:focus{
 }
 
 @media(max-width:1020px){
-    textarea{
+    textarea,
+    .afterSummarize{
         width: 100%;
     }
 }
