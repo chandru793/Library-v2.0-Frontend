@@ -14,26 +14,15 @@ import { decode } from './Api/Api';
 const Home1 = () => {
     const navigate = useNavigate();
 
-
-    async function populate() {
-        const req = await fetch(`http://localhost:8081/api/quote`, {
-            headers: {
-                'x-access-token': localStorage.getItem('token'),
-            }
-        })
-        const data = await req.json();
-        console.log(data);
-    }
-
     const token = localStorage.getItem('token')
+    console.log("home token",token)
     if (token) {
         const user = decode(token)
-        console.log("user success", user)
+        // console.log("user success", user)
+        
         if (!user) {
             localStorage.removeItem('token')
             navigate('/login')
-        } else {
-            populate()
         }
     }
 
