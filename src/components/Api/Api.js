@@ -19,4 +19,4 @@ export const getAllNews = async (category, country) =>
 //=============jwt==============
 //decode user token
 export const decode = async (token) =>
-  await axios.post(`https://localhost:8081/api/decode`, { token });
+  await axios.post(`http://localhost:8081/api/decode`, { token: token });
