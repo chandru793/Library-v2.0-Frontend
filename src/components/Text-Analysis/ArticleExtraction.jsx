@@ -13,6 +13,7 @@ const ArticleExtraction = () => {
     const [summary, setSummary] = useState("");
     const [text, setText] = useState("");
     const [show, setShow] = useState(true);
+    const [points,setPoints]=useState([])
 
     const summarize = () => {
         const dataObj = JSON.stringify({
@@ -37,22 +38,26 @@ const ArticleExtraction = () => {
             .then(function (response) {
                 // console.log(response.data);
                 setSummary(response.data.summary);
-                // console.log("summary", summary);
+                console.log("summary", summary);
             })
             .catch(function (error) {
                 console.error(error);
             });
 
-    }
-
+        }
+        
     const update = () => {
         articleExtraction(data).then((res) => {
-            // console.log(res.data);
+            // console.log("data of extraction: ",res.data);
             setTitle(res.data.title)
-            // console.error("title",title)
+            // console.log("title",title)
             setText(res.data.text)
-            // console.error("text",text)
+            // console.log("text",text)
             summarize();
+            console.log("Points");
+            setPoints(summary.toString().split('. '));
+            console.log("Points", points);
+
         });
     }
 
@@ -79,7 +84,12 @@ const ArticleExtraction = () => {
                     <div className='result'>
                         <h1 className='h1'>{title}</h1>
                         <h3>Summary</h3>
-                        <p>{summary}</p>
+                        {/* <p>{summary}</p> */}
+                        <ul>
+                            {points.map((list) =>
+                                <li>{list}</li>
+                            )}
+                        </ul>
                         <h3>Brief News</h3>
                         <p>{text}</p>
                     </div>
