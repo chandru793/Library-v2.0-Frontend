@@ -10,7 +10,11 @@
     color: #f1f1f1;
     border-radius: 5px;
     padding: 15px;
+<<<<<<< HEAD
     padding-right: 85px;
+=======
+    padding-left: 60px;
+>>>>>>> e4afbc2c10f2684f827190383733ee5380668ea8
     letter-spacing: 0.1rem;
     margin-right: 10px;
     width: 300px;
@@ -19,6 +23,7 @@
 
 .svg{
     position: absolute;
+<<<<<<< HEAD
     margin-left: -84px;
     margin-top: 11px;
     padding: 5px;
@@ -29,6 +34,10 @@
     outline: none;
     letter-spacing: 0.1rem;
     cursor: pointer;
+=======
+    margin-left: 10px;
+    margin-top: 7px;
+>>>>>>> e4afbc2c10f2684f827190383733ee5380668ea8
 }
 .cards{
     background: transparent;
