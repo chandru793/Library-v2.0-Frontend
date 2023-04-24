@@ -3,6 +3,25 @@
     text-align: -webkit-center;
     align-items: center;
 }
+
+.searchbar{
+    background-color: transparent;
+    border:2px solid #f1f1f1;
+    color: #f1f1f1;
+    border-radius: 5px;
+    padding: 15px;
+    padding-left: 60px;
+    letter-spacing: 0.1rem;
+    margin-right: 10px;
+    width: 300px;
+    margin-bottom: 50px;
+}
+
+.svg{
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 7px;
+}
 .cards{
     background: transparent;
     background-color: transparent !important;
