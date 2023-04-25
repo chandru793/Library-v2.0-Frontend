@@ -53,7 +53,7 @@ export default function Books() {
                     <input
                         type='text'
                         className='searchbar'
-                        placeholder='Enter book name to search'
+                        placeholder='Enter book name'
                         value={search}
                         onChange={(e) => { setSearch(e.target.value); }}
                         onKeyDown={handleKeyEvents}
@@ -61,23 +61,23 @@ export default function Books() {
                     />
                     <button className='svg' onClick={() => { setSearch2(search); update(search2)}} >Search</button>
                 </div>
-                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} className='cardgrid'>
                     {
                         library.map((book) =>
-                            <Grid item xs={4} sm={4} md={4} key={book.id} >
-                                <Card sx={{ maxWidth: 400 }} className='cards' key={book.accessInfo.id}>
+                            <Grid item xs={3} sm={3} md={3} key={book.id}>
+                                <Card sx={{ maxWidth: 300 }} className='cards' key={book.accessInfo.id}>
                                     <CardActionArea style={{ "height": "500px", "display": "flex", "flexDirection": "column", "justifyContent": "space-between" }}>
                                         <CardMedia
                                             component="img"
-                                            height="250"
+                                            height="300"
                                             image={book.volumeInfo.imageLinks.thumbnail}
                                             alt="green iguana"
                                         />
                                         <CardContent className='card'>
-                                            <Typography gutterBottom variant="h5" component="div">
+                                            <Typography gutterBottom variant="h6" component="div" className='title'>
                                                 {book.volumeInfo.title}
                                             </Typography>
-                                            <Typography gutterBottom variant="h6" component="div">
+                                            <Typography gutterBottom variant="p" component="div" className='author'>
                                                 ~ {book.volumeInfo.authors}
                                             </Typography>
                                             {/* <Typography variant="body2" color="text.secondary" className='card'>

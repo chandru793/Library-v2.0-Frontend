@@ -13,7 +13,22 @@ const ArticleExtraction = () => {
     const [summary, setSummary] = useState("");
     const [text, setText] = useState("");
     const [show, setShow] = useState(true);
-    const [points,setPoints]=useState([])
+    const [points, setPoints] = useState([]);
+
+    const update = () => {
+        articleExtraction(data).then((res) => {
+            // console.log("data of extraction: ",res.data);
+            setTitle(res.data.title)
+            // console.log("title",title)
+            setText(res.data.text)
+            // console.log("text",text)
+            summarize();
+            // console.log("Points");
+            // setPoints(summary.toString().split('. '));
+            // console.log("Points", points);
+            // settingPoints();
+        });
+    }
 
     const summarize = () => {
         const dataObj = JSON.stringify({
@@ -43,27 +58,21 @@ const ArticleExtraction = () => {
             .catch(function (error) {
                 console.error(error);
             });
-
-        }
-        
-    const update = () => {
-        articleExtraction(data).then((res) => {
-            // console.log("data of extraction: ",res.data);
-            setTitle(res.data.title)
-            // console.log("title",title)
-            setText(res.data.text)
-            // console.log("text",text)
-            summarize();
-            console.log("Points");
-            setPoints(summary.toString().split('. '));
-            console.log("Points", points);
-
-        });
     }
 
-    useEffect(() => {
-        update();
-    }, []);
+    // const settingPoints = () => {
+    //     var temp = summary.toString();
+    //     console.log("temp: ", temp)
+    //     var temp2 = [temp.split('.')];
+    //     console.log("temp2: ", temp2)
+    //     setPoints(temp2.split());
+    //     console.log("Points", points);
+    // }
+
+    // useEffect(() => {
+    //     update();
+        // settingPoints();
+    // }, []);
 
     return (
         <>
@@ -80,16 +89,16 @@ const ArticleExtraction = () => {
                     />
                     <button className='button1' onClick={() => update(data)}>Submit</button>
                 </div>
-                {show && title !== "" && summary !== "" && text !== ""? (
+                {show && title !== "" && summary !== "" && text !== "" && points !== "" ? (
                     <div className='result'>
                         <h1 className='h1'>{title}</h1>
                         <h3>Summary</h3>
-                        {/* <p>{summary}</p> */}
-                        <ul>
+                        <p>{summary}</p>
+                        {/* <ul>
                             {points.map((list) =>
                                 <li>{list}</li>
                             )}
-                        </ul>
+                        </ul> */}
                         <h3>Brief News</h3>
                         <p>{text}</p>
                     </div>

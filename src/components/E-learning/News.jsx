@@ -70,7 +70,7 @@ const News = () => {
 
     return (
         <>
-            <Navbar/>
+            <Navbar />
             <div>
                 <div className='filter'>
                     <Dropdown options={countryOptions} onChange={(e) => { setCountry(e.value); update(category, country) }} value={country} placeholder="Select Country" />
@@ -82,7 +82,7 @@ const News = () => {
                             allNews.filter((news) => news.urlToImage != null).map((news) =>
                                 <Grid item xs={4} sm={4} md={4} key={news.id} >
                                     <Card sx={{ maxWidth: 400 }} className='Maincards'>
-                                        <CardActionArea style={{ "height": "560px", "display": "flex", "flexDirection": "column", "justifyContent": "space-between" }}>
+                                        <CardActionArea style={{ "height": "540px", "display": "flex", "flexDirection": "column", "justifyContent": "space-between" }}>
                                             <CardMedia
                                                 component="img"
                                                 height="250"
@@ -101,7 +101,7 @@ const News = () => {
                                                 </Typography>
                                             </CardContent>
                                             <CardContent style={{ "display": "flex", "alignItems": "center", "justifyContent": "center" }}>
-                                                <Button size="small" href={news.url} target='blank' className='button'>
+                                                <Button href={news.url} target='blank' className='button'>
                                                     Read Full News
                                                 </Button>
                                             </CardContent>

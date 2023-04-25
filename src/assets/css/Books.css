@@ -10,11 +10,8 @@
     color: #f1f1f1;
     border-radius: 5px;
     padding: 15px;
-<<<<<<< HEAD
     padding-right: 85px;
-=======
-    padding-left: 60px;
->>>>>>> e4afbc2c10f2684f827190383733ee5380668ea8
+    /* padding-left: 60px; */
     letter-spacing: 0.1rem;
     margin-right: 10px;
     width: 300px;
@@ -23,21 +20,22 @@
 
 .svg{
     position: absolute;
-<<<<<<< HEAD
-    margin-left: -84px;
-    margin-top: 11px;
-    padding: 5px;
+    margin-left: -87px;
+    margin-top: 9px;
+    padding: 7px;
     background: transparent;
     background-color: transparent;
     color: white;
     border: 1px solid #dcdcdc;
+    border-radius: 5px;
     outline: none;
     letter-spacing: 0.1rem;
     cursor: pointer;
-=======
-    margin-left: 10px;
-    margin-top: 7px;
->>>>>>> e4afbc2c10f2684f827190383733ee5380668ea8
+    /* margin-left: 10px; */
+    /* margin-top: 7px; */
+}
+.cardgrid{
+    justify-content: space-evenly !important;
 }
 .cards{
     background: transparent;
@@ -47,9 +45,45 @@
 }
 .card{
     color:#ffffff !important;
+    /* padding-bottom: 20px; */
+    height: 145px;
+    overflow: hidden;
+}
+.title{
+    height: 95px;
+    overflow-y: hidden;
+}
+.author{
+    height: 50px;
+    overflow: hidden;
 }
 .button{
+    position: absolute;
+    bottom: 5px;
     display: flex;
     color:#ffffff !important;
     border: 2px solid #ffffff !important;
+}
+
+@media(max-width:760px){
+    .bookContainer{
+        margin: 50px 20px;
+    }
+    .searchbar{
+        width: 270px;
+    }
+}
+
+@media(max-width:420px){
+    .searchbar{
+        width: 220px;
+    }
+}
+@media(max-width:370px){
+    .bookContainer{
+        margin: 50px 0px;
+    }
+    .searchbar{
+        width: 150px;
+    }
 }

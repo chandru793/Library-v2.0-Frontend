@@ -6,7 +6,7 @@
 .Dropdown-control{
     background-color: rgba(0,0,0,0.5) !important;
     color: #fff !important;
-    width: 50vw;
+    width: 49.45vw;
 }
 .Dropdown-menu{
     background-color: black !important;
@@ -43,7 +43,10 @@
     color:#ffffff !important;
 }
 .button{
-    display: flex;
+    position: absolute !important;
+    bottom: 20px !important;
+    width: 150px !important;
+    display: flex !important;
     color:#ffffff !important;
     border: 2px solid #ffffff !important;
 }
