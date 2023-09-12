@@ -23,7 +23,7 @@ export const getAllNews = async (category, country) =>
 //api for article extraction
 export const articleExtraction = async (data) =>
   await axios.get(
-    `https://extractorapi.com/api/v1/extractor/?apikey=1e53be0acaeee3b68a36cf3b7e732e3d1d3f93ea&url=${data}`
+    `https://extractorapi.com/api/v1/extractor/?apikey=${process.env.REACT_APP_EXTRACTOR_API_KEY}&url=${data}`
   );
 
 //================================
