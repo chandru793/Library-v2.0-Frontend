@@ -19,7 +19,7 @@ const SignUp = () => {
 
     async function registerUser(event) {
         event.preventDefault()
-        const response = await fetch(`http://localhost:8081/api/signup`, {
+        const response = await fetch(`${process.env.REACT_APP_HOST_URL}/api/signup`, {
             method: `POST`,
             headers: {
                 'Content-Type': 'application/json',

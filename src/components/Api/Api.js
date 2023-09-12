@@ -4,7 +4,7 @@ import axios from "axios";
 //=============Books==============
 //api to get all the books
 export const getAllBooks = async () =>
-  await axios.get("http://localhost:8081/api/v2/library");
+  await axios.get(`${process.env.REACT_APP_HOST_URL}/api/v2/library`);
 
 export const googlebooks = async (search) =>
   await axios.get(
@@ -30,4 +30,4 @@ export const articleExtraction = async (data) =>
 //=============jwt==============
 //decode user token
 export const decode = async (token) =>
-  await axios.post(`http://localhost:8081/api/decode`, { token: token });
+  await axios.post(`${process.env.REACT_APP_HOST_URL}/api/decode`, { token: token });
